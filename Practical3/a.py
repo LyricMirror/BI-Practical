@@ -28,3 +28,17 @@ print(data.describe())
 missing_values = data.isnull().sum()
 print('\nMissing values After Cleaning and Normalization : ')
 print(missing_values)
+
+# b.py part
+print("\n\nAfter Cleaning\n\n")
+print("First 5 rows of the dataset:")
+print(data.head())
+
+numerical_columns = ['Outlook', 'Temperature', 'Humidity', 'Wind', 'Play']
+
+print("\nSummary statistics of the dataset after cleaning:")
+print(data[numerical_columns].describe())
+
+missing_values = data[numerical_columns].isnull().sum()
+print("\nMissing values in the numerical columns after cleaning:")
+print(missing_values)

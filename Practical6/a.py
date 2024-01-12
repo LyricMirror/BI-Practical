@@ -8,10 +8,10 @@ y = np.array([5, 20, 14, 32, 22, 38])
 def lin_reg(x, y):
     n = len(x)
     if len(y) != n:
-        raise ValueError("HU HA HUA")
+        raise ValueError("Error")
     x_mean = np.mean(x)
     y_mean = np.mean(y)
-    ss_xy = n * np.sum(n * y) - np.sum(x) * np.sum(y)
+    ss_xy = n * np.sum(x * y) - np.sum(x) * np.sum(y)
     ss_xx = n * np.sum(x * x) - pow(np.sum(x), 2)
     slope = ss_xy / ss_xx
     intercept = y_mean - slope * x_mean
@@ -21,8 +21,8 @@ def lin_reg(x, y):
 coefficient = lin_reg(x, y)
 
 
-def predict(x, coefficients):
-    return coefficient["slope"] * x + coefficients["intercept"]
+def predict(x, coefficient):
+    return coefficient["slope"] * x + coefficient["intercept"]
 
 
 plt.scatter(x, y, marker='o', color='teal')
@@ -31,6 +31,6 @@ plt.ylabel('y')
 plt.title('Linear Regression LSM')
 plt.plot(x, predict(x, coefficient), color='red')
 plt.show()
-new_x = np.array([10])
+new_x = np.array([6])
 predicted_y = predict(new_x, coefficient)
 print("Predicted y values for new x : ", predicted_y)

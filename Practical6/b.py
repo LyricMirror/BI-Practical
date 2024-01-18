@@ -2,8 +2,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression
 
-x = np.array([5, 15, 25, 35, 45, 55])
-y = np.array([5, 20, 14, 32, 22, 38])
+x = np.array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+y = np.array([1, 3, 2, 5, 7, 8, 8, 9, 10, 12])
 
 
 def lin_reg(x, y):

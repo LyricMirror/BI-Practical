@@ -29,7 +29,7 @@ missing_values = data.isnull().sum()
 print('\nMissing values After Cleaning and Normalization : ')
 print(missing_values)
 
-# b.py part
+# b(library).py part
 print("\n\nAfter Cleaning\n\n")
 print("First 5 rows of the dataset:")
 print(data.head())

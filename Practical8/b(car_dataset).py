@@ -1,4 +1,6 @@
 import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
 from sklearn.naive_bayes import CategoricalNB
 from sklearn.preprocessing import LabelEncoder
 from sklearn.metrics import confusion_matrix
